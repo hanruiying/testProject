@@ -9,7 +9,8 @@
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist",
     "lint": "eslint src --ext .js,.ts --cache --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-stylelint": "stylelint --config .stylelintrc.cjs src/**/*.{less,css,scss}"
   },
   "husky": {
     "hooks": {
@@ -19,6 +20,9 @@
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "npm run lint"
+    ],
+    "*.{less,scss,css}": [
+      "npm run lint-stylelint"
     ]
   },
   "publishConfig": {
@@ -49,6 +53,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
+    "stylelint": "^15.9.0",
+    "stylelint-config-standard": "^33.0.0",
     "typescript": "^5.1.6"
   }
 }

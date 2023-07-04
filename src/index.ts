@@ -1,3 +1,4 @@
+import 'index.css'
 const calc = (a: number, b: number): number => {
   return a - b
 }
