@@ -18,7 +18,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint --config .eslintrc.js"
+      "npm run lint"
     ]
   },
   "publishConfig": {
